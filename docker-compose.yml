@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: flask_web_app
+    ports:
+      - "8080:5000"
+    volumes:
+      - comments_data:/app/comments.txt
+    restart: unless-stopped
+
+volumes:
+  comments_data:

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мартынов Руслан</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-image: url('https://github-production-user-asset-6210df.s3.amazonaws.com/7995991/56369464-0611fa00-61bf-11e9-9c4a-302deac011db.jpg');
+            background-size: cover;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #ff0000;
+            padding: 20px;
+            text-align: center;
+            font-size: 2em;
+            text-transform: uppercase;
+        }
+        .main-container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 50px auto;
+            gap: 20px;
+        }
+        .top-blocks {
+            display: flex;
+            gap: 20px;
+            flex-basis: 100%;
+        }
+        .block {
+            flex: 1;
+            padding: 20px;
+            background-color: rgba(20, 20, 20, 0.85);
+            border-radius: 5px;
+        }
+        .bottom-block {
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(20, 20, 20, 0.85);
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        h1, h2 {
+            color: #ff0000;
+            text-transform: uppercase;
+        }
+        p {
+            line-height: 1.8;
+            color: #e0e0e0;
+        }
+        .highlight {
+            color: #00c3ff;
+            font-style: italic;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #ff0000;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-size: 0.8em;
+        }
+        .profile-pic {
+            float: right;
+            margin-left: 20px;
+            border-radius: 50%;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .social-links div {
+            text-align: center;
+        }
+        .social-links img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+        .report-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin-top: 30px;
+            text-align: center;
+            background-color: #000000;
+            color: #ff0000;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        .report-button:hover {
+            background-color: #ffffff;
+        }
+        .comment-block {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid #ff0000;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .comment-block strong {
+            color: #00c3ff;
+        }
+        .comment-block p {
+            color: #e0e0e0;
+            margin: 5px 0 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Портфолио
+</header>
+
+<div class="main-container">
+    <div class="top-blocks">
+        <div class="block">
+            <h1>Обо мне</h1>
+            <img class="profile-pic" src="https://sun9-59.userapi.com/impg/TgqiQ0qqPgOVUXVVeqpzId9Rqqgvlm8QRl07nw/D5lK2aW_JO4.jpg?size=1216x2160&quality=96&sign=d1f19f0f44de829a53bb001ef4bf2c3b&type=album" alt="Моя фотография" width="100" height="100"/>
+            <p>Меня зовут <span class="highlight">Мартынов Руслан</span>. Живу в <span class="highlight">Новосибирске</span></p>
+            <p>Обожаю python и лучше языка ещё не придумали, поэтому программирую только на нём.</p>
+        </div>
+        <div class="block">
+            <h2>Образование</h2>
+            <p>Учусь в <span class="highlight">НГТУ</span> на факультете <span class="highlight">прикладной математики и информатики</span>. На направлении <span class="highlight">математическое обеспечение и администрирование информационных систем</span>. Профиль <span class="highlight">системы искусственного интеллекта</span>.</p>
+        </div>
+    </div>
+
+    <div class="bottom-block">
+        <h2>Интересы</h2>
+        <p>Программирую на python, изучаю искусственный интеллект, компьютерное зрение.</p>
+        <p>Работаю репетитором ЕГЭ по информатике.</p>
+        <div class="social-links">
+            <div>
+                <a href="https://github.com/snalar" target="_blank">
+                    <img src="https://repository-images.githubusercontent.com/761364644/72b252be-8654-48ad-a73e-5c75283aec6c" alt="GitHub">
+                </a>
+            </div>
+            <div>
+                <a href="https://t.me/f4nt1k104" target="_blank">
+                    <img src="https://a.d-cd.net/6e01e75s-1920.jpg" alt="Telegram">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-block">
+        <h2>Комментарии</h2>
+        <form id="comment-form">
+            <div>
+                <input type="text" name="name" placeholder="Ваше имя" required style="width: 100%; margin-bottom: 10px;">
+            </div>
+            <div>
+                <textarea name="comment" placeholder="Ваш комментарий" rows="4" required style="width: 100%; margin-bottom: 10px;"></textarea>
+            </div>
+            <button type="submit" style="width: 100%;">Добавить комментарий</button>
+        </form>
+        <div id="comments-section">
+            {% for comment in comments %}
+            <div class="comment-block">
+                <strong>{{ comment.name }}</strong>:
+                <p>{{ comment.comment }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<footer>
+    © 2024 Мартынов Руслан. ПМИ-22. НГТУ ФПМИ.
+</footer>
+
+<script>
+    document.getElementById('comment-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+        fetch('/add_comment', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                const commentsSection = document.getElementById('comments-section');
+                commentsSection.innerHTML = '';
+                data.comments.forEach(comment => {
+                    const commentDiv = document.createElement('div');
+                    commentDiv.classList.add('comment-block');
+                    commentDiv.innerHTML = `<strong>${comment.name}</strong>: <p>${comment.comment}</p>`;
+                    commentsSection.appendChild(commentDiv);
+                });
+                this.reset();
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
